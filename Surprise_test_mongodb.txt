@@ -1,0 +1,34 @@
+A-1). db.patients.find({ "status": "Admitted" })
+
+A-2). db.doctors.find({ "experience": { "$gt": 10 } })
+
+A-3). db.patients.find({ "diagnosis": "Diabetes" })
+
+A-4). db.doctors.find({ "schedule.shift": "Morning" })
+
+A-5). db.patients.find({ "ward.type": "ICU" })
+
+A-6). db.doctors.find({ "schedule.days": "Monday" })
+
+A-7). db.patients.find({ "ward.number": "W101" })
+
+A-8). db.doctors.find({ "expertise": { "$all": ["COPD", "Asthma"] } })
+
+A-9). db.patients.find({ "diagnosis.1": { "$exists": true } })
+
+A-10). db.doctors.find({ "department": "Internal Medicine" })
+
+A-11). db.patients.updateOne({ "patientId": "P101" }, { "$addToSet": { "medications": "Metformin" } })
+
+A-12). db.doctors.updateOne({ "doctorId": "DOC002" }, { "$set": { "schedule.consultingRoom": "R106" } })
+
+A-13). db.patients.updateOne({ "patientId": "P101" }, { "$set": { "status": "Discharged", "ward": null } })
+
+A-14). db.doctors.updateOne({ "doctorId": "DOC003" }, { "$set": { "isAvailable": false } })
+
+A-15). db.patients.deleteMany({ "status": "Discharged" })
+
+A-16). db.patients.deleteMany({ "insuranceActive": false })
+
+A-17). db.patients.updateOne({ "patientId": "P101" }, { "$pull": { "medications": "Lisinopril" } })
+
